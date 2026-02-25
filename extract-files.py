@@ -19,7 +19,6 @@ from extract_utils.main import (
 
 namespace_imports = [
     'vendor/oneplus/infiniti', #"FIXME: libqti-perfd" depends on undefined module "libdisplayconfig.qti".
-    'vendor/oneplus/macan', #"FIXME: libqti-perfd" depends on undefined module "libdisplayconfig.qti".
     'device/oneplus/sm8850-common',
     'hardware/qcom-caf/sm8850',
     'hardware/qcom-caf/wlan',
@@ -51,6 +50,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so' : blob_fixup()
+        .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.12.so'),
     'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff': blob_fixup()
         .add_needed('libshims_aidl_fingerprint_v3.oplus.so'),
     'odm/etc/init/init.network.rc': blob_fixup()
@@ -93,6 +94,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libaudioutils_shim.so'),
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    'vendor/lib64/libVoiceSdk.so': blob_fixup()
+        .replace_needed('libtensorflowlite_c.so', 'libtensorflowlite_c_vendor.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

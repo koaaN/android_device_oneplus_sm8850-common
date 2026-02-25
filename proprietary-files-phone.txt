@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 15R (CPH2767_16.0.3.503(EX01)).
+## are from OnePlus 15 (CPH2745_16.0.3.503(EX01)).
 
 # CNE
 vendor/app/CACertService/CACertService.apk
@@ -334,6 +334,7 @@ odm/bin/hw/subsys_daemon
 odm/bin/commcenterd
 odm/bin/init.subsys.sh
 odm/etc/init/commcenterd.rc
+odm/etc/init/init.modem.rc
 odm/etc/init/init.network.rc
 odm/etc/init/subsys_daemon.rc
 odm/etc/vintf/manifest/device_manifest_communication_center_aidl.xml
@@ -422,11 +423,10 @@ vendor/etc/vintf/manifest/deviceinfo-saidl.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
 vendor/etc/2025-05-09_platform_RSA_SM8850-KAANAPALI_license_44de0851-4860-4b27-93ce-888ddb6d846a.pfm
-vendor/etc/2025-07-01_platform_RSA_SM8850_license_trial_SDS.pfm
 vendor/etc/2025-08-19_platform_RSA_SM8850-KAANAPALI_license_041c7d27-2a09-4856-a151-bc97c58a32f7.pfm
 vendor/etc/2025-08-19_platform_RSA_SM8850-KAANAPALI_license_c5211d39-e3d3-46c8-9dd0-3775810af82f.pfm
 vendor/etc/2025-09-17_platform_RSA_SM8845_license_trial_SDS.pfm
-vendor/etc/2025-09-23_platform_RSA_SM8845_license_5114256b-d4ce-4cf4-8c4b-40f4c70ce6a5.pfm
+vendor/etc/2025-12-15_platform_RSA_SM8850_license_trial_SDS.pfm
 vendor/etc/SDA_official_license.pfm
 vendor/etc/SDA_official_license_for_SM8845.pfm
 vendor/etc/SDS_official_license.pfm
